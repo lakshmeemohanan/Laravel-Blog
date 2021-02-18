@@ -21,18 +21,11 @@ Route::get('/about', 'App\Http\Controllers\PagesController@about');
 Route::get('/services', 'App\Http\Controllers\PagesController@services');
 Route::resource('posts', 'App\Http\Controllers\PostsController');
 Route::get('/posts/delete/{id}', 'App\Http\Controllers\PostsController@destroy')->name('posts.destroy');
-/*Route::get('/hello', function () {
-    return "Hello World";
-});
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/users/{id}', function ($id) {
-    return 'This is user ' . $id;
-});
-Route::get('/services', function () {
-    return view('pages.services');
-});*/
+Route::get('/usercontroller/path',[
+   'middleware' => 'web',
+   'uses' => 'App\Http\Controllers\UserController@showPath'
+]);
+Route::get('/foo/bar','App\Http\Controllers\UriController@index');
 
 Auth::routes();
 
