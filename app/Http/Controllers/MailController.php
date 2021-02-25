@@ -14,7 +14,7 @@ class MailController extends Controller {
       Mail::send(['text'=>'mail'], $data, function($message) {
          $message->to('commonmusicbox@gmail.com', 'Laravel Blog')->subject
             ('Laravel Basic Testing Mail');
-         $message->from('mohananlakshmee@gmail.com','Lakshmee Mohan');
+         $message->from('commonmusicbox@gmail.com','Lakshmee Mohan');
       });
       echo "Basic Email Sent. Check your inbox.";
    }
@@ -23,7 +23,7 @@ class MailController extends Controller {
       Mail::send('mail', $data, function($message) {
          $message->to('commonmusicbox@gmail.com', 'Laravel Blog')->subject
             ('Laravel HTML Testing Mail');
-         $message->from('mohananlakshmee@gmail.com','Lakshmee Mohan');
+         $message->from('commonmusicbox@gmail.com','Lakshmee Mohan');
       });
       echo "HTML Email Sent. Check your inbox.";
    }
@@ -34,7 +34,7 @@ class MailController extends Controller {
             ('Laravel Testing Mail with Attachment');
          $message->attach('C:\laravel-master\laravel\public\uploads\image.png');
          $message->attach('C:\laravel-master\laravel\public\uploads\test.txt');
-         $message->from('mohananlakshmee@gmail.com','Lakshmee Mohan');
+         $message->from('commonmusicbox@gmail.com','Lakshmee Mohan');
       });
       echo "Email Sent with attachment. Check your inbox.";
    }
