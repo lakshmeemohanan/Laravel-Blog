@@ -27,6 +27,12 @@ Route::get('/usercontroller/path',[
 ]);
 Route::get('/foo/bar','App\Http\Controllers\UriController@index');
 
+/*Mail functionality starts*/
+Route::get('/sendbasicemail','App\Http\Controllers\MailController@basic_email');
+Route::get('/sendhtmlemail','App\Http\Controllers\MailController@html_email');
+Route::get('/sendattachmentemail','App\Http\Controllers\MailController@attachment_email');
+/*Mail functionality ends*/
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
