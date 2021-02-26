@@ -12,7 +12,7 @@ class MailController extends Controller {
       $data = array('name'=>"Lakshmee Mohanan");
 
       Mail::send(['text'=>'mail'], $data, function($message) {
-         $message->to('commonmusicbox@gmail.com', 'Laravel Blog')->subject
+         $message->to('lakshmeemohanan@yandex.com', 'Laravel Blog')->subject
             ('Laravel Basic Testing Mail');
          $message->from('commonmusicbox@gmail.com','Lakshmee Mohan');
       });
@@ -21,7 +21,7 @@ class MailController extends Controller {
    public function html_email() {
       $data = array('name'=>"Lakshmee Mohanan");
       Mail::send('mail', $data, function($message) {
-         $message->to('commonmusicbox@gmail.com', 'Laravel Blog')->subject
+         $message->to('lakshmeemohanan@yandex.com', 'Laravel Blog')->subject
             ('Laravel HTML Testing Mail');
          $message->from('commonmusicbox@gmail.com','Lakshmee Mohan');
       });
@@ -30,7 +30,7 @@ class MailController extends Controller {
    public function attachment_email() {
       $data = array('name'=>"Virat Gandhi");
       Mail::send('mail', $data, function($message) {
-         $message->to('commonmusicbox@gmail.com', 'Laravel Blog')->subject
+         $message->to('lakshmeemohanan@yandex.com', 'Laravel Blog')->subject
             ('Laravel Testing Mail with Attachment');
          $message->attach('C:\laravel-master\laravel\public\uploads\image.png');
          $message->attach('C:\laravel-master\laravel\public\uploads\test.txt');
