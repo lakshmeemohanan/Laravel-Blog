@@ -15,8 +15,6 @@
                     @endif
 
                     <a href="/posts/create" class="btn btn-primary">Create a Blog Post</a>
-                    <!--<a href="/sendbasicemail" class="btn btn-primary">Send Email</a>-->
-                    <p></p>
                     @if(count($posts) > 0)
                       <table class="table table-striped">
                         <tr>
